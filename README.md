@@ -1,8 +1,10 @@
 # Zebrafish Nanoplastics Transcriptome
 
+## 斑马鱼中的纳米塑料转录组
+
 基于斑马鱼 PS-NPs 暴露 RNA-seq count matrix 的探索性转录组分析项目。
 
-> \*\*重要说明\*\*：本项目每组只有 1 个样本，没有生物学重复。因此当前结果属于基于 fold-change 阈值的探索性候选基因筛选，并未进行 DESeq2/edgeR 统计建模，也没有 p-value 和 FDR。请不要将“candidate genes”表述为统计显著的 DEGs。
+> 注：本项目每组只有 1 个样本，没有生物学重复。因此当前结果属于基于 fold-change 阈值的探索性候选基因筛选，并未进行 DESeq2/edgeR 统计建模，也没有 p-value 和 FDR。请不要将“candidate genes”表述为统计显著的 DEGs。
 
 ## 项目背景
 
@@ -10,11 +12,11 @@
 
 ## 样本设计
 
-|样本|处理|
-|-|-|
-|`wt`|对照|
-|`low`|0.1 mg/L PS-NPs|
-|`High`|10 mg/L PS-NPs|
+|样本|处理|浓度|
+|-|-|-|
+|`wt`|对照|无|
+|`low`|0.1 mg/L PS-NPs|0.1 毫克/升聚苯乙烯纳米粒子|
+|`High`|10 mg/L PS-NPs|10 毫克/升聚苯乙烯纳米粒子|
 
 注意：当前数据为 3 个样本、每组 1 个生物学重复。
 
@@ -29,41 +31,57 @@
 
 主要图表位于 `results/figures/`，候选基因和富集分析输入位于 `results/tables/`。
 
-## 用本仓库中代码所画出的图示意：
+## 用本仓库中代码所画出的图示意
 
-## Results
+### Sample QC｜样本质量控制
 
-### Sample QC
+!\[Sample correlation](./results/figures/fig01\_sample\_correlation.png)
 
-!\[Sample correlation](results/figures/fig01\_sample\_correlation.png)
+*样本相关性分析*
 
-!\[Expression distribution](results/figures/fig02\_expression\_distribution.png)
+!\[Expression distribution](./results/figures/fig02\_expression\_distribution.png)
 
-!\[PCA](results/figures/fig03\_pca.png)
+*表达分布*
 
-!\[Sample distance](results/figures/fig04\_sample\_distance.png)
+!\[PCA](./results/figures/fig03\_pca.png)
 
-### Candidate gene analysis
+*主成分分析*
 
-!\[Fold-change distribution](results/figures/fig05\_fold\_change\_distribution.png)
+!\[Sample distance](./results/figures/fig04\_sample\_distance.png)
 
-!\[MA plots](results/figures/fig06\_ma\_plots.png)
+*样本距离*
 
-!\[Top 50 clustered heatmap](results/figures/fig07\_top50\_clustered\_heatmap.png)
+### Candidate gene analysis｜候选基因分析
 
-### Dose response
+!\[Fold-change distribution](./results/figures/fig05\_fold\_change\_distribution.png)
 
-!\[Dose response](results/figures/fig08\_dose\_response.png)
+*Fold-change 分布*
+
+!\[MA plots](./results/figures/fig06\_ma\_plots.png)
+
+*MA 图*
+
+!\[Top 50 clustered heatmap](./results/figures/fig07\_top50\_clustered\_heatmap.png)
+
+*Top 50 聚类热图*
+
+### Dose response｜剂量响应
+
+!\[Dose response](./results/figures/fig08\_dose\_response.png)
+
+*剂量响应曲线*
 
 ## 可供参考
 
-富集结果图及更加具体的图片结果分析可见data/report，report中图片类型与此处展现图片类型一致，但细节、配色稍有不同。
+富集结果图及更加具体的图片结果分析可见 `data/report`。Report 中图片类型与此处展示图片类型一致，但细节、配色稍有不同。
 
 ## 复现方法
 
 ```bash
 python -m venv .venv
-source .venv/bin/activate  # Windows: .venv\\Scripts\\activate
+source .venv/bin/activate  # Windows: .venv\\Scripts
+
+ctivate
 pip install -r requirements.txt
 python run\_all.py
 ```
@@ -76,7 +94,7 @@ python run\_all.py
 4. High vs WT、low vs WT fold-change 计算
 5. 基于 `|log2FC| > 1` 和表达量阈值筛选候选基因
 6. 样本 QC、PCA、MA 图、聚类热图和剂量响应可视化
-7. 整理候选基因列表用于 Metascape GO/PPI 富集分析
+7. 整理候选基因列表，用于 Metascape 网页版 GO/PPI 富集分析
 
 完整方法说明见：`docs/analysis\_notes.md`。
 
@@ -90,7 +108,7 @@ python run\_all.py
 ## 目录结构
 
 ```text
-zebrafish-nanoplastics-transcriptome-upload/
+zebrafish-nanoplastics-transcriptome/
 ├── data/
 ├── docs/
 ├── results/
