@@ -32,44 +32,29 @@
 主要图表位于 `results/figures/`，候选基因和富集分析输入位于 `results/tables/`。
 
 ## 用本仓库中代码所画出的图示意
+## Results
 
-### Sample QC｜样本质量控制
+### Sample QC
 
-!\[Sample correlation](./results/figures/fig01\_sample\_correlation.png)
+![Sample correlation](results/figures/fig01_sample_correlation.png)
 
-*样本相关性分析*
+![Expression distribution](results/figures/fig02_expression_distribution.png)
 
-!\[Expression distribution](./results/figures/fig02\_expression\_distribution.png)
+![PCA](results/figures/fig03_pca.png)
 
-*表达分布*
+![Sample distance](results/figures/fig04_sample_distance.png)
 
-!\[PCA](./results/figures/fig03\_pca.png)
+### Candidate gene analysis
 
-*主成分分析*
+![Fold-change distribution](results/figures/fig05_fold_change_distribution.png)
 
-!\[Sample distance](./results/figures/fig04\_sample\_distance.png)
+![MA plots](results/figures/fig06_ma_plots.png)
 
-*样本距离*
+![Top 50 clustered heatmap](results/figures/fig07_top50_clustered_heatmap.png)
 
-### Candidate gene analysis｜候选基因分析
+### Dose response
 
-!\[Fold-change distribution](./results/figures/fig05\_fold\_change\_distribution.png)
-
-*Fold-change 分布*
-
-!\[MA plots](./results/figures/fig06\_ma\_plots.png)
-
-*MA 图*
-
-!\[Top 50 clustered heatmap](./results/figures/fig07\_top50\_clustered\_heatmap.png)
-
-*Top 50 聚类热图*
-
-### Dose response｜剂量响应
-
-!\[Dose response](./results/figures/fig08\_dose\_response.png)
-
-*剂量响应曲线*
+![Dose response](results/figures/fig08_dose_response.png)
 
 ## 可供参考
 
