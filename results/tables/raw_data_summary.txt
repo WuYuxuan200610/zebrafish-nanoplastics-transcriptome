@@ -1,0 +1,35 @@
+Raw file: /mnt/agents/output/zebrafish-nanoplastics-transcriptome/data/raw/gene_expression_matrix.csv
+Shape: 32520 genes x 3 samples
+Columns: GeneID, High, low, wt
+
+First rows:
+            GeneID  High  low   wt
+ENSDARG00000000001   320  285  264
+ENSDARG00000000002   393  469  307
+ENSDARG00000000018  1241 1075  871
+ENSDARG00000000019  3122 3601 2638
+ENSDARG00000000068  1315 1339 1226
+ENSDARG00000000069  1712 2102 1597
+ENSDARG00000000086  1111 1137  970
+ENSDARG00000000103  3761 3905 3484
+ENSDARG00000000142   127  198  147
+ENSDARG00000000151   346  272  224
+
+Dtypes:
+GeneID    object
+High       int64
+low        int64
+wt         int64
+
+Summary of count columns:
+                High           low             wt
+count   32520.000000  3.252000e+04   32520.000000
+mean     1037.802921  1.134483e+03     879.939268
+std      9968.161240  1.176500e+04    8651.073831
+min         0.000000  0.000000e+00       0.000000
+25%         3.000000  3.000000e+00       2.000000
+50%       109.000000  1.160000e+02      94.500000
+75%       538.000000  5.600000e+02     459.000000
+max    894300.000000  1.175582e+06  824952.000000
+
+Duplicated GeneID rows: 0

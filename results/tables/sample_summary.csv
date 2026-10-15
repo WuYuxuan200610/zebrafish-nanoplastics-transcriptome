@@ -1,0 +1,4 @@
+sample,total_counts,genes_with_any_expression,genes_gt_10,median,q1,q3
+High,33749351,25770,22329,109.0,3.0,538.0
+low,36893394,25926,22471,116.0,3.0,560.0
+wt,28615625,25648,22094,94.5,2.0,459.0
